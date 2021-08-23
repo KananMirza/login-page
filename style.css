@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.main {
+    width: 1440px;
+    height: 1024px;
+    display: flex;
+    margin: auto;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+/*Login page start*/
+.login {
+    width: 50%;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.additem {
+    background-color: 4EB49C;
+    border-radius: 10px;
+}
+
+.home {
+    width: 450px;
+    height: 550px;
+    margin: auto;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.welcome {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+span {
+    color: #AAA713;
+
+    opacity: 0.7;
+}
+
+span:hover {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.log {
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.form {
+    position: relative;
+}
+
+.input {
+    width: 385px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #032D23;
+    font-size: 24px;
+}
+
+.eye {
+    position: absolute;
+    top: 90px;
+    right: 80px;
+    font-size: 36px;
+    cursor: pointer;
+    color:#AAA713;
+    
+}
+
+.check {
+    display: flex;
+
+}
+
+.checkbox {
+    width: 26px;
+    height: 26px;
+
+}
+
+label {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.forget {
+    font-size: 18px;
+    margin-left: 85px;
+    color: black
+}
+.forget:hover{
+    color:#AAA713 ;
+    transition: 0.5s;
+   
+}
+.button {
+    margin-top: 25px;
+}
+
+button {
+    width: 385px;
+    height: 65px;
+    font-size: 20px;
+    background-color: #032D23;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create {
+    margin-top: 30px;
+}
+
+.started {
+    font-size: 20px;
+}
+
+footer {
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.term {
+    font-family: 'Inter', sans-serif;
+}
+
+/*Login page end*/
+
+
+/*Slider start*/
+.slider {
+    width: 50%;
+    
+}
+
+.text {
+    font-size: 34px;
+    color: white;
+}
+
+.author {
+    font-size: 18;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.word {
+    width: 475px;
+    height: 100px;
+    margin: auto;
+    margin-top: 830px;
+}
+.counter {
+    display: flex;
+    width: 55px;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.counter div {
+    background-color: gray;
+    width: 15px;
+    height: 5px;
+    border-radius: 10px;
+}
