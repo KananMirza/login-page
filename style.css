@@ -97,8 +97,8 @@ h1 {
     right: 80px;
     font-size: 36px;
     cursor: pointer;
-    color:#AAA713;
-    
+    color: #AAA713;
+
 }
 
 .check {
@@ -112,6 +112,10 @@ h1 {
 
 }
 
+.checkbox:focus {
+    border-color: red;
+}
+
 label {
     font-size: 18px;
     margin-left: 10px;
@@ -122,11 +126,13 @@ label {
     margin-left: 85px;
     color: black
 }
-.forget:hover{
-    color:#AAA713 ;
+
+.forget:hover {
+    color: #AAA713;
     transition: 0.5s;
-   
+
 }
+
 .button {
     margin-top: 25px;
 }
@@ -135,14 +141,15 @@ button {
     width: 385px;
     height: 65px;
     font-size: 20px;
-    background-color:  #054b3b;
+    background-color: #054b3b;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
-button:hover{
-   background-color: #032D23
+
+button:hover {
+    background-color: #032D23
 }
 
 .create {
@@ -172,7 +179,7 @@ footer {
 /*Slider start*/
 .slider {
     width: 50%;
-    
+
 }
 
 .text {
