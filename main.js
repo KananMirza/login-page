@@ -1,9 +1,8 @@
 let user = {
     email:['kanan@gmail.com','ulvi@gmail.com','teymur@gmail.com','eyyub@gmail.com'],
-    password:['12345','ulvi123','teymur_33','yuptech001']
+    password:['12345','ulvi123','teymur_33','yuptech001'],
+    username:['kanan','ulvi','teymur','eyyub']
 }
-
-
 
 let input=document.getElementsByTagName('input');
 let i =document.getElementsByTagName("i")[0];
@@ -19,6 +18,7 @@ onload = ()=>{
 
 // See password:
 i.onclick = () =>{
+
     if(input[1].type == "password"){
         input[1].type="text";
         i.classList.remove("fa-eye");
@@ -28,7 +28,6 @@ i.onclick = () =>{
         input[1].type = "password"
         i.classList.remove("fa-eye-slash");
         i.classList.add('fa-eye');
-       
     }
 }
 // Slider
@@ -44,31 +43,35 @@ function Slider(){
         slider.style.backgroundImage = `url('img/${image[j]}.jpg')`;
         document.getElementById(j).style.backgroundColor = "white";
         document.getElementById(j-1).style.backgroundColor = "gray";
-
-        
     }
-
 }
 
 //Login
 
 button.onclick = () =>{
-    
     for(let a=0;a<5;a++){
-        if(input[0].value == user.email[a]){
+        if(input[0].value == user.email[a] || input[0].value == user.username[a] ){
         if(input[1].value == user.password[a]){
             button.innerHTML = `<i class="fas fa-cog fa-spin"></i>`
-            setTimeout(Success,1500)
+            document.getElementById('error').innerHTML = '';
+            setTimeout(Success,1500);
+            setTimeout(Send,2250)
+            break;
         }else{
-            console.log('Email or password wrong')
+            document.getElementById('error').innerHTML ='Email or password wrong'
         }
     }else{
-        console.log('Yanlis')
+        document.getElementById('error').innerHTML ='Email or password wrong'
     }
-
 }
 }
 
 function Success(){
-    alert("Giris")
+    button.innerHTML = `<i class="far fa-check-circle"></i> Done`;
+    
+
+}
+
+function Send(){
+    location.href = 'https://github.com/KananMirza/login-page';
 }

@@ -28,8 +28,13 @@
 }
 
 .additem {
-    background-color: 4EB49C;
+    background-color: #d4fcf1;
     border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home {
@@ -81,7 +86,10 @@ h1 {
     border-radius: 10px;
     border: 2px solid #032D23;
     font-size: 24px;
+    outline: none;
+    padding-left: 5px;
 }
+
 
 .eye {
     position: absolute;
@@ -127,11 +135,14 @@ button {
     width: 385px;
     height: 65px;
     font-size: 20px;
-    background-color: #032D23;
+    background-color:  #054b3b;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+button:hover{
+   background-color: #032D23
 }
 
 .create {
@@ -182,6 +193,7 @@ footer {
     margin: auto;
     margin-top: 830px;
 }
+
 .counter {
     display: flex;
     width: 55px;
