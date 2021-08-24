@@ -127,7 +127,6 @@ if(document.getElementById('signup').innerHTML =="Sign Up"){
     div.appendChild(inp);
   
 }else{
-   input[2].remove();
     Login();
 }
 }
@@ -141,7 +140,7 @@ function Login(){
    
     
     input[0].placeholder = "Email or Username";
-    
+    input[2].remove();
 }
 
 function Fadein(){
