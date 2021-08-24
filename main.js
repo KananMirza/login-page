@@ -143,8 +143,3 @@ function Login(){
     input[2].remove();
 }
 
-function Fadein(){
-    let opa = 0;
-
-    opa+=0.1
-}
