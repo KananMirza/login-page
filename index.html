@@ -65,21 +65,20 @@
                     <p class="welcome">Welcome back to <a href=""><span>OrgaFarm</span></a></p>
                 </div>
                 <div class="log">
-                    <h1>Login</h1>
+                    <h1 id="login">Login</h1>
                     <h3 id="error"></h3>
                 </div>
                 <div class="form">
-
-                    <input type="text" class="input" placeholder="Email or Username" required>
+                    <div id="input">
+                    <input type="text" class="input" placeholder="Email or Username" id="email" required>
                     <input type="password" class="input" id="password" placeholder="Password" required>
                     <i class="far fa-eye eye"></i>
+                </div>
 
-                    <div class="check">
+                    <div class="check" id="check">
                         <input type="checkbox" name="checkbox" class="checkbox">
                         <label for="checkbox">Remember me</label>
-                        <a href="">
-                            <p class="forget">Forget Password?</p>
-                        </a>
+                        <p class="forget"><a href="">Forget Password?</a></p>
                     </div>
                 </div>
                 <div class="button">
@@ -87,7 +86,8 @@
 
                 </div>
                 <div class="create">
-                    <p class="started term">Don’t have an account? <a href=""><span>Get Started</span></a></p>
+                    <p class="started term" id="start">Don’t have an account? </p>
+                    <p class="started term" id="signup">Get Started</p>
                 </div>
             </div>
             <footer>

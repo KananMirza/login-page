@@ -53,7 +53,7 @@
 
 span {
     color: #AAA713;
-
+cursor: pointer;
     opacity: 0.7;
 }
 
@@ -63,6 +63,11 @@ span:hover {
 
 a {
     text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #AAA713;
+    transition: 0.5s;
 }
 
 h1 {
@@ -119,6 +124,7 @@ h1 {
 label {
     font-size: 18px;
     margin-left: 10px;
+    display: inline-block;
 }
 
 .forget {
@@ -127,11 +133,7 @@ label {
     color: black
 }
 
-.forget:hover {
-    color: #AAA713;
-    transition: 0.5s;
 
-}
 
 .button {
     margin-top: 25px;
@@ -154,11 +156,23 @@ button:hover {
 
 .create {
     margin-top: 30px;
+    display: flex;
+
 }
 
 .started {
     font-size: 20px;
 }
+
+#signup{
+    margin-left: 5px;
+    color: #AAA713;
+    cursor: pointer;
+}
+#signup:hover{
+    opacity: 0.8;
+}
+
 
 footer {
     margin: auto;
@@ -171,6 +185,9 @@ footer {
 
 .term {
     font-family: 'Inter', sans-serif;
+}
+p{
+    display: inline-block;
 }
 
 /*Login page end*/
@@ -188,7 +205,7 @@ footer {
 }
 
 .author {
-    font-size: 18;
+    font-size: 18px;
     color: white;
     text-align: center;
     margin-top: 10px;
@@ -213,4 +230,82 @@ footer {
     width: 15px;
     height: 5px;
     border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    box-shadow: none;
+    flex-direction: column;
+}
+  .login{
+      width: 100%;
+      text-align: center;
+     
+  }
+  .header{
+      width: 90%;
+      margin: auto;
+  }
+  .home{
+      width: 100%;
+      height: 100%;
+     
+  }
+  .welcome{
+      font-size: 24px;
+  }
+  .input{
+      width: 90%;
+  }
+  .eye{
+      right: 10%;
+  }
+  .check{
+    width: 100%;
+   margin: auto;
+   justify-content: center;
+  }
+  
+  .forget{
+      margin-left: 10%;
+    }
+    button{
+        width: 90%;
+        margin: auto;
+    }
+    .create{
+        justify-content: center;
+    }
+    footer{
+        margin-top: 60px;
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .slider{
+        width: 100%;
+        margin-top: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+    }
+    .text{
+        font-size: 24px;
+    }
+    .word{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .counter{
+        margin-bottom: 50px;
+    }
 }
