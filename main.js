@@ -138,10 +138,10 @@ function Login(){
     document.getElementById('signup').innerHTML ="Sign Up";
     document.getElementById('login').innerHTML = "Login";
     document.getElementById('check').style.display = "inline-block";
-    inp.style.display = "none"
-
+   
+    
     input[0].placeholder = "Email or Username";
-    input[2].remove();
+    
 }
 
 function Fadein(){
