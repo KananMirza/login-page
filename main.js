@@ -136,7 +136,7 @@ function Login(){
     document.getElementById('start').innerHTML = "Don’t have an account?";
     document.getElementById('signup').innerHTML ="Sign Up";
     document.getElementById('login').innerHTML = "Login";
-    document.getElementById('check').style.display = "inline-block";
+    document.getElementById('check').style.display = "flex";
    
     
     input[0].placeholder = "Email or Username";
