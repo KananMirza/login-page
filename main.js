@@ -20,7 +20,9 @@ let username = document.getElementById('username');
 
 onload = () => {
     slider.style.backgroundImage = `url('img/${image[0]}.jpg')`;
-    setInterval(Slider, 4000)
+    setInterval(Slider, 5000);
+    setInterval(Fadeout,4900)
+   
     if (input[1].type == "password") {
         i.classList.add('fa-eye-slash');
     }
@@ -42,17 +44,24 @@ i.onclick = () => {
 }
 // Slider
 function Slider() {
-
+   
     if (j == 2) {
+      
+        SlideDown();
+        
         j = 0;
         slider.style.backgroundImage = `url('img/${image[j]}.jpg')`;
         document.getElementById(j + 2).style.backgroundColor = "gray";
         document.getElementById(j).style.backgroundColor = "white";
     } else {
+        
+        SlideDown();
+        
         j++;
         slider.style.backgroundImage = `url('img/${image[j]}.jpg')`;
         document.getElementById(j).style.backgroundColor = "white";
         document.getElementById(j - 1).style.backgroundColor = "gray";
+       
     }
 }
 
@@ -65,19 +74,21 @@ button.onclick = () => {
        
         if (input[0].value == user.email[a] || input[0].value == user.username[a]) {
             if (input[1].value == user.password[a]) {
+                $('#error').removeClass('alert-danger')
                 button.innerHTML = `<i class="fas fa-cog fa-spin"></i>`
-                document.getElementById('error').innerHTML = '';
+                $('#error').text('');
                 setTimeout(Success, 1500);
                 setTimeout(Send, 2250);
-                console.log(user.email)
                 break;
                 
             } else {
-                document.getElementById('error').innerHTML = 'Email or password wrong'
+                $('#error').text('Email or password wrong');
+                $('#error').addClass('alert-danger');
             }
         } else {
             
-            document.getElementById('error').innerHTML = 'Email or password wrong'
+            $('#error').text('Email or password wrong');
+            $('#error').addClass('alert-danger');
         }
     }
 }else {
@@ -90,13 +101,20 @@ button.onclick = () => {
     user.email.push(email.value);
     user.password.push(pass.value);
     user.username.push(input[2].value);
-    button.innerHTML = `<i class="fas fa-cog fa-spin"></i>`
-    setTimeout(Success,1500)
-    setTimeout(Login,2500)
+    var em = localStorage.setItem('email',user.email);
+    var pas = localStorage.setItem('password',user.password);
+    var us = localStorage.setItem('username',user.username);
+    button.innerHTML = `<i class="fas fa-cog fa-spin"></i>`;
+    setTimeout(Success,1500);
+    setTimeout(Login,2500);
         console.log(user.username)
 }
 }
 }
+
+document.getElementById('slider'),addEventListener('mouseenter',function(){
+    this.clearInterval();
+})
 
 function Success() {
     button.innerHTML = `<i class="far fa-check-circle"></i> Done`;
@@ -116,11 +134,13 @@ document.getElementById('signup').onclick = () =>{
     inp.id = 'username'
     
 if(document.getElementById('signup').innerHTML =="Sign Up"){
-    button.innerHTML = "Sign up";
-    document.getElementById('start').innerHTML = "Do have an account?";
-    document.getElementById('signup').innerHTML ="Login";
-    document.getElementById('login').innerHTML = "Sign up";
-    document.getElementById('check').style.display = "none";
+    $('#error').removeClass('alert-danger');
+    $('button').text('Sign up');
+    $('#check').hide('fast');
+    $('#start').text('Do have an account?');
+    $('#signup').text('Login');
+    $('#login').text('Sign up');
+   
 
     input[0].placeholder = "Email";
 
@@ -133,13 +153,25 @@ if(document.getElementById('signup').innerHTML =="Sign Up"){
 
 function Login(){
     button.innerHTML = "Login";
-    document.getElementById('start').innerHTML = "Don’t have an account?";
-    document.getElementById('signup').innerHTML ="Sign Up";
-    document.getElementById('login').innerHTML = "Login";
-    document.getElementById('check').style.display = "flex";
+    $('#start').text('Don’t have an account?');
+    $('#signup').text('Sign Up');
+    $('#login').text('Login');
+    $('#check').show('fast');
    
     
     input[0].placeholder = "Email or Username";
     input[2].remove();
 }
 
+$('input').click(function(){
+    $('#error').removeClass('alert-danger')
+    $('#error').text('')
+});
+
+function Fadeout(){
+    $('#slider').fadeOut('fast');
+}
+
+function SlideDown(){
+    $('#slider').fadeIn('fast');
+}
