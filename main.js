@@ -43,25 +43,23 @@ i.onclick = () => {
     }
 }
 // Slider
-function Slider() {
+function Slider(event) {
    
     if (j == 2) {
-      
+       
         SlideDown();
-        
         j = 0;
         slider.style.backgroundImage = `url('img/${image[j]}.jpg')`;
         document.getElementById(j + 2).style.backgroundColor = "gray";
         document.getElementById(j).style.backgroundColor = "white";
     } else {
-        
+       
         SlideDown();
         
         j++;
         slider.style.backgroundImage = `url('img/${image[j]}.jpg')`;
         document.getElementById(j).style.backgroundColor = "white";
         document.getElementById(j - 1).style.backgroundColor = "gray";
-       
     }
 }
 
@@ -169,6 +167,7 @@ $('input').click(function(){
 });
 
 function Fadeout(){
+  
     $('#slider').fadeOut('fast');
 }
 
